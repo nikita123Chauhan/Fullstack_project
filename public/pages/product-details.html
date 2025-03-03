@@ -86,14 +86,24 @@
 <body>
   <header>
     <div class="container">
-      <h1>MyStore</h1>
+      <h1>NikVoyage</h1>
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search for products...">
+        <button id="search-button">Search</button>
+      </div>
+      <!-- Hamburger Menu for Mobile -->
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
       <nav>
         <ul>
           <li><a href="../index.html">Home</a></li>
           <li><a href="product-details.html">Shop</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
           <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -419,6 +429,49 @@
 </footer>
 
 <script>
+  // Toggle navigation for hamburger menu
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('nav');
+
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+
+  // Search Functionality
+ document.addEventListener("DOMContentLoaded", function () {
+     const searchInput = document.getElementById("search-input");
+     const searchButton = document.getElementById("search-button");
+     const productCards = document.querySelectorAll(".product-card");
+
+   // Function to filter products based on search query
+   function filterProducts(query) {
+        const lowerCaseQuery = query.toLowerCase();
+
+      productCards.forEach((card) => {
+       const productName = card.querySelector("h3").textContent.toLowerCase();
+       if (productName.includes(lowerCaseQuery)) {
+          card.style.display = "block"; // Show matching products
+       }
+       else {
+        card.style.display = "none"; // Hide non-matching products
+      }
+      });
+ }
+
+// Event listener for search button
+searchButton.addEventListener("click", () => {
+  const query = searchInput.value.trim();
+  filterProducts(query);
+});
+
+// Event listener for pressing "Enter" in the search input
+ searchInput.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    const query = searchInput.value.trim();
+    filterProducts(query);
+  }
+   });
+ });
     document.addEventListener("DOMContentLoaded", function () {
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
     
