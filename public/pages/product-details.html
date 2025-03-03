@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyStore - Product Details</title>
+  <link rel="stylesheet" href="../styles/product-details.css">
+  <link rel="stylesheet" href="../styles/home.css">
+  <style>
+    /* Product Section Styling */
+    main {
+        padding: 20px;
+        margin-top: 1vh; /* Push content below the carousel */
+      }
+      
+       h2 {
+        font-size: 30px;
+        color: #333;
+        margin-top: 1vh;
+        padding: 70px;
+       
+      }
+    
+    
+      .featured-products {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .product-grid {
+        display: flex; /* Use Flexbox for a single row */
+        gap: 20px; /* Space between cards */
+        overflow-x: auto; /* Enable horizontal scrolling if needed */
+        padding-bottom: 10px; /* Space for scrollbar */
+      }
+    
+      .product-card {
+        flex: 0 0 auto; /* Prevent cards from shrinking or growing */
+        width: 250px; /* Fixed width for each card */
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+    
+      .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+    
+      .product-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+    
+      .product-card h3 {
+        font-size: 18px;
+        margin: 10px;
+        color: #333;
+      }
+    
+      .product-card p {
+        font-size: 16px;
+        margin: 10px;
+        color: #666;
+      }
+    
+      .btn {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background: #3b82f6;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background 0.3s ease;
+      }
+    
+      .btn:hover {
+        background: #2563eb;
+      }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>MyStore</h1>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="product-details.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Men's Section -->
+    <section class="product-section">
+      <h2>Men t-shirt</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="../assets/images/bc1.jpg" alt="Women's Product 1">
+          <h3>Men Casual Wears</h3>
+          <p>$39.99</p>
+          <button class="btn add-to-cart" data-id="4">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/bc2.jpg" alt="Women's Product 2">
+          <h3>Mens Casual Wears</h3>
+          <p>$29.99</p>
+          <button class="btn add-to-cart" data-id="5">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/bc3.jpg" alt="Women's Product 3">
+          <h3>Mens Casual wears</h3>
+          <p>$34.99</p>
+          <button class="btn add-to-cart" data-id="6">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/bc4.jpg" alt="Women's Product 3">
+          <h3>Mens Party Wears wears</h3>
+          <p>$34.99</p>
+          <button class="btn add-to-cart" data-id="6">Add to Cart</button>
+        </div>
+         <div class="product-card">
+               <img src="../assets/images/bc5.jpg" alt="Women's Product 3">
+               <h3>Mens Professional wears</h3>
+               <p>$34.99</p>
+               <button class="btn add-to-cart" data-id="6">Add to Cart</button>
+          </div>
+            <div class="product-card">
+              <img src="../assets/images/bc6.jpg" alt="Women's Product 3">
+              <h3>Mens Party wears</h3>
+              <p>$34.99</p>
+              <button class="btn add-to-cart" data-id="6">Add to Cart</button>
+            </div>
+            <div class="product-card">
+              <img src="../assets/images/bc7.jpg" alt="Women's Product 3">
+              <h3>Mens Suit</h3>
+              <p>$34.99</p>
+              <button class="btn add-to-cart" data-id="6">Add to Cart</button>
+            </div>
+            <div class="product-card">
+              <img src="../assets/images/bc1.jpg" alt="Women's Product 3">
+              <h3>Mens Casual Wears</h3>
+              <p>$34.99</p>
+              <button class="btn add-to-cart" data-id="6">Add to Cart</button>
+            </div>
+            <div class="product-card">
+              <img src="../assets/images/bc9.jpg" alt="Women's Product 3">
+              <h3>Mens Party wears</h3>
+              <p>$34.99</p>
+              <button class="btn add-to-cart" data-id="6">Add to Cart</button>
+            </div>
+        </div>
+      </div>
+    </section>
+
+        
+         
+    
+
+    <!-- Women's Section -->
+    <section class="product-section">
+      <h2>Women's Collection</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="../assets/images/wc1.jpg" alt="Women's Product 1">
+          <h3>Women's Dress</h3>
+          <p>$39.99</p>
+          <button class="btn add-to-cart" data-id="4">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/wc2.jpg" alt="Women's Product 2">
+          <h3>Women's Top</h3>
+          <p>$29.99</p>
+          <button class="btn add-to-cart" data-id="5">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/wc3.jpg" alt="Women's Product 3">
+          <h3>Women's Skirt</h3>
+          <p>$34.99</p>
+          <button class="btn add-to-cart" data-id="6">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/wc4.jpg" alt="Women's Product 3">
+          <h3>Women's T-shirts</h3>
+          <p>$134.99</p>
+          <button class="btn add-to-cart" data-id="6">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/wc5.jpg" alt="Women's Product 3">
+          <h3>Women's Ethnics Wears</h3>
+          <p>$344.99</p>
+          <button class="btn add-to-cart" data-id="6">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/wc6.jpg" alt="Women's Product 3">
+          <h3>Women's Ethnics Wears</h3>
+          <p>$34.99</p>
+          <button class="btn add-to-cart" data-id="6">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/wc7.jpg" alt="Women's Product 3">
+          <h3>Women's Ethnics Wears</h3>
+          <p>$347.99</p>
+          <button class="btn add-to-cart" data-id="6">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/wc8.jpg" alt="Women's Product 3">
+          <h3>Women's Lengha</h3>
+          <p>$134.99</p>
+          <button class="btn add-to-cart" data-id="6">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/wc9.jpg" alt="Women's Product 3">
+          <h3>Women's Ethics Wears</h3>
+          <p>$340.99</p>
+          <button class="btn add-to-cart" data-id="6">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Accessories Section -->
+    <section class="product-section">
+      <h2>Accessories</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="../assets/images/images11.jpg" alt="Accessory 1">
+          <h3>Rings</h3>
+          <p>$19.99</p>
+          <button class="btn add-to-cart" data-id="7">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/iamges12.jpg" alt="Accessory 2">
+          <h3>Stylish Braslet</h3>
+          <p>$59.99</p>
+          <button class="btn add-to-cart" data-id="8">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/iamges13.jpg" alt="Accessory 3">
+          <h3>Leather Bag</h3>
+          <p>$24.99</p>
+          <button class="btn add-to-cart" data-id="9">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/iamges14.jpg" alt="Accessory 3">
+          <h3>Hair Crunchies</h3>
+          <p>$24.99</p>
+          <button class="btn add-to-cart" data-id="9">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/iamges16.jpg" alt="Accessory 3">
+          <h3>Hair Clips</h3>
+          <p>$24.99</p>
+          <button class="btn add-to-cart" data-id="9">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/iamges17.jpg" alt="Accessory 3">
+          <h3>Earings</h3>
+          <p>$24.99</p>
+          <button class="btn add-to-cart" data-id="9">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/image18.jpg" alt="Accessory 3">
+          <h3>Paerls Necklace</h3>
+          <p>$24.99</p>
+          <button class="btn add-to-cart" data-id="9">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/iamges7.jpg" alt="Accessory 3">
+          <h3>Pearls Earings</h3>
+          <p>$24.99</p>
+          <button class="btn add-to-cart" data-id="9">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/iamges8.jpg" alt="Accessory 3">
+          <h3>Necklace</h3>
+          <p>$24.99</p>
+          <button class="btn add-to-cart" data-id="9">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/iamges9.jpg" alt="Accessory 3">
+          <h3>Necklace</h3>
+          <p>$24.99</p>
+          <button class="btn add-to-cart" data-id="9">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/iamges11.jpg" alt="Accessory 3">
+          <h3>Braslet</h3>
+          <p>$24.99</p>
+          <button class="btn add-to-cart" data-id="9">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/iamges12.jpg" alt="Accessory 3">
+          <h3>Leather Bag</h3>
+          <p>$24.99</p>
+          <button class="btn add-to-cart" data-id="9">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/iamges13.jpg" alt="Accessory 3">
+          <h3>Leather Bag</h3>
+          <p>$24.99</p>
+          <button class="btn add-to-cart" data-id="9">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/images20.jpg" alt="Combo 3">
+          <h3>Beautiful Chain</h3>
+          <p>$149.99</p>
+          <button class="btn add-to-cart" data-id="12">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Combo Section -->
+    <section class="product-section">
+      <h2>Combo for Men and Women</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="../assets/images/mw1.jpg" alt="Combo 1">
+          <h3>Casual Combo</h3>
+          <p>$99.99</p>
+          <button class="btn add-to-cart" data-id="10">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/mw2.jpg" alt="Combo 2">
+          <h3>Formal Combo</h3>
+          <p>$129.99</p>
+          <button class="btn add-to-cart" data-id="11">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/mw3.jpg" alt="Combo 3">
+          <h3>Party Combo</h3>
+          <p>$149.99</p>
+          <button class="btn add-to-cart" data-id="12">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/mw4.jpg" alt="Combo 3">
+          <h3>Party Combo</h3>
+          <p>$149.99</p>
+          <button class="btn add-to-cart" data-id="12">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/mw5.jpg" alt="Combo 3">
+          <h3>Party Combo</h3>
+          <p>$149.99</p>
+          <button class="btn add-to-cart" data-id="12">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/mw6.jpg" alt="Combo 3">
+          <h3>Party Combo</h3>
+          <p>$149.99</p>
+          <button class="btn add-to-cart" data-id="12">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/mw7.jpg" alt="Combo 3">
+          <h3>Party Combo</h3>
+          <p>$149.99</p>
+          <button class="btn add-to-cart" data-id="12">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/mw8.jpg" alt="Combo 3">
+          <h3>Party Combo</h3>
+          <p>$149.99</p>
+          <button class="btn add-to-cart" data-id="12">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/mv4.jpg" alt="Combo 3">
+          <h3>Party Combo</h3>
+          <p>$149.99</p>
+          <button class="btn add-to-cart" data-id="12">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <section>    
+        <div id="containerFooter">
+            
+            <div id="webFooter">
+                <h3> online store </h3>
+                <p> men clothing </p>
+                <p> women clothing </p>
+                <p> men accessories </p>
+                <p> women accessories </p>
+            </div>
+            <div id="webFooter">
+                <h3> helpful link </h3>
+                <p> home </p>
+                <p> about </p>
+                <p> contact </p>
+            </div>
+            <div id="webFooter">
+                <h3> partners </h3>
+                <p> zara </p>
+                <p> pantaloons </p>
+                <p> levis </p>
+                <p> ucb </p>
+                <p> + many more </p>
+            </div>
+            <div id="webFooter">
+                <h3> address </h3>
+                <p> building 102 </p>
+                <p> central avenue </p>
+                <p> la - 902722 </p>
+                <p> Uttarakhand</p>
+            </div>
+        </div>
+        <div id="credit"><a href="https://linkedin.com/in/priyanka-sharma-b79401142"> ©Nikita Chauhan </a> &nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp <a href="https://www.edyoda.com/" target="_blank"> EDYODA </a></div>
+    </section>
+
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    
+        function updateCartDisplay() {
+            let cartItemsContainer = document.getElementById("cart-items");
+            let totalAmountElement = document.getElementById("total-amount");
+            let payButton = document.getElementById("pay-button");
+    
+            // Clear current cart items
+            cartItemsContainer.innerHTML = "";
+            let totalAmount = 0;
+    
+            // Display each item in the cart
+            cart.forEach(item => {
+                let li = document.createElement("li");
+                li.textContent = `${item.name} - $${item.price} x ${item.quantity}`;
+                cartItemsContainer.appendChild(li);
+                totalAmount += item.price * item.quantity;  // Calculate total
+            });
+    
+            totalAmountElement.textContent = totalAmount.toFixed(2); // Update total
+    
+            // Show pay button only if cart is not empty
+            payButton.style.display = cart.length > 0 ? "block" : "none";
+        }
+    
+        function updateCartCount() {
+            let totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            document.getElementById("cart-count").textContent = totalItems;
+        }
+    
+        function addToCart(productId, productName, productPrice, productImage) {
+            productId = productId.toString();
+            let existingProduct = cart.find(item => item.id === productId);
+    
+            if (existingProduct) {
+                existingProduct.quantity += 1; // Increment quantity if item exists
+            } else {
+                cart.push({
+                    id: productId,
+                    name: productName,
+                    price: productPrice,
+                    image: productImage,
+                    quantity: 1
+                });
+            }
+    
+            // Store updated cart in localStorage
+            localStorage.setItem("cart", JSON.stringify(cart));
+    
+            updateCartCount();  // Update cart item count
+            updateCartDisplay(); // Update the cart display
+            alert(`${productName} added to cart!`);
+        }
+    
+        // Add event listeners to "Add to Cart" buttons
+        document.querySelectorAll(".add-to-cart").forEach(button => {
+            button.addEventListener("click", function () {
+                let productId = this.getAttribute("data-id");
+                let productName = this.previousElementSibling.previousElementSibling.textContent;
+                let productPrice = parseFloat(this.previousElementSibling.textContent.replace("$", "").trim());
+                let productImage = this.parentElement.querySelector("img").src;
+    
+                addToCart(productId, productName, productPrice, productImage);
+            });
+        });
+    
+        // Handle the "Pay" button click event
+        document.getElementById("pay-button").addEventListener("click", function () {
+            alert("Your order is confirmed! 🎉");
+            localStorage.removeItem("cart"); // Clear cart from localStorage
+            cart = [];  // Reset cart
+            updateCartCount(); // Update cart count
+            updateCartDisplay(); // Update cart display
+        });
+    
+        // Initial load: Update cart and count
+        updateCartCount();
+        updateCartDisplay();
+    });
+</script>
+</body>
+</html>
